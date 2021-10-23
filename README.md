@@ -17,6 +17,8 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   # zobacz
   $ pip list
   ```
+  # Tworzymy Makefile
+
 
   Sprawdź: [tutorial venv](https://docs.python.org/3/tutorial/venv.html) oraz [biblioteki flask](http://flask.pocoo.org).
 
@@ -24,7 +26,7 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
   ```
   # jako zwykły program
-  $ python main.py
+  $ curl 127.0.0.1:5000
 
   # albo:
   $ PYTHONPATH=. FLASK_APP=hello_world flask run
@@ -47,7 +49,7 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   ```
   ...
 
-  # aktywacja 
+  # aktywacja
   $ source .venv/bin/activate
   ```
 
