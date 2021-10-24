@@ -19,3 +19,8 @@ def index():
 @app.route('/outputs')
 def supported_output():
     return ", ".join(SUPPORTED)
+
+
+output_name = request.args.get('name')
+if not (output_name != Null):
+moje_imie = output_name
