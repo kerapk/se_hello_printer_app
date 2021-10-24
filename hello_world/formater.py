@@ -1,4 +1,3 @@
-
 PLAIN = "plain"
 PLAIN_UP = "plain_uppercase"
 PLAIN_LO = "plain_lowercase"
@@ -19,8 +18,14 @@ def get_formatted(msg, imie, format):
     elif format == JSON:
         result = format_to_json(msg, imie)
     elif format == XML:
-        result = format_to_xml(msg, imie)
+        result = format_to_xml(msg, imie)  # jeszcze nie istnieje
     return result
+
+
+def format_to_xml(msg, name):
+    r = "<greetings><msg>{0}</msg><name>{1}</name></greetings>".format(msg,
+                                                                       name)
+    return r
 
 
 def format_to_json(msg, imie):
@@ -38,7 +43,3 @@ def plain_text_upper_case(msg, imie):
 
 def plain_text_lower_case(msg, imie):
     return plain_text(msg.lower(), imie.lower())
-
-
-def format_to_xml(msg, imie):
-    return ('<greetings>\n \t<name>'+imie+'</name>\n \t<msg>'+msg+'</msg>\n</greetings>')
