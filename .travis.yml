@@ -5,3 +5,11 @@ install:
 
 script:
   - make test
+
+script:
+  - make docker_build
+
+language: python
+
+services:
+  - docker
